@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        REPO_URL = 'https://github.com/projectemern/user-service.git'
+        REPO_URL = 'https://github.com/Kameshjustin/userservice.git'
         IMAGE_NAME = 'user-service'
         CONTAINER_NAME = 'user-service'
     }
@@ -14,7 +14,7 @@ pipeline {
                 // Use Jenkins credentials (create one ID: github_credentials)
                 git branch: 'main',
                     url: "${REPO_URL}",
-                    credentialsId: 'github_credentials'
+                    credentialsId: 'git-cred-akjus'
             }
         }
 
